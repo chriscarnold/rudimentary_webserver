@@ -1,0 +1,196 @@
+/* General layout based on the styleguide */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1024px;
+    font-family: Times, 'Times New Roman', Georgia, serif;
+    font-size: 14px;
+    color: #333333;
+}
+/* header style and font */
+.navigation {
+    width: 100%;
+    font-size: 120%;
+    color: #fefefe;
+}
+/* ensuring that the navigation bar is at the very top of page  */
+.container {
+    background:#333333;
+    height: 60px;
+    margin: 0;
+    border: 3px solid rgba(255,255,255,.2);/*I added a border to the navigation bar distinguish it more from the main area*/
+}
+/* Setting link style of header items */
+.navigation a {
+    background-color: #333333;
+    color: #fefefe;
+    float:left;
+    text-align:center;
+    padding: 14px 20px;
+}
+/* Setting the link style of the header items when the mouse hovers on it */
+.navigation a:hover {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #ff0000 ;
+}
+/* Setting the link style of the header links when keyboard focus is on the item */
+.navigation a:focus{
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color:#ff0000;
+}
+/* Setting the link style of the current section of the header links */
+.navigation .current{
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #ff0000;
+}
+/* Style and spacing for Title and location */
+.heading {margin-left: 8px;}
+.subheading {
+    margin-top: -20px;
+    font-size: 10px;
+    margin-left: 8px;
+}
+/* General style for images and main area */
+img {
+    width: 100%;
+    padding: 5px;
+    height: auto;
+    vertical-align: middle;
+}
+img:hover {box-shadow: 0 0 2px 1px #333333;}/*I added a box shadow around the images to make it more clear that it links to the image page*/
+#main_area { /*Using flexbox to get an even layout of images*/
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+}
+/* Setting alignment and style of the 3 columns and 2 rows of images and links */
+.row {                          
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+}
+.column1 {
+    flex: calc(640/344);/* Creating an even row alignment of images by using ratio of height to width of each image*/
+    padding: 5px;
+}
+/* For every flex item there will be a style setting for when the mouse hovers over it and when keyboard focus is on it */
+.column1:hover {text-decoration: underline;}
+.column1:focus-within {text-decoration: underline;}
+.column1 a { 
+    text-decoration: none !important;
+    border:0px !important;
+    outline:none;
+    border-width: 0px;
+    outline-width:0px;
+    border-bottom: none;
+    color: #333333 !important;
+}
+.column2 {
+    flex: calc(640/396);
+    padding: 5px;
+}
+.column2:hover {text-decoration: underline;}
+.column2:focus-within {text-decoration: underline;}
+.column2 a {
+    text-decoration: none !important;
+    border:0px !important;
+    outline:none;
+    border-width: 0px;
+    outline-width:0px;
+    border-bottom: none;
+    color: #333333 !important;
+}
+.column3 {
+    flex: calc(640/566);
+    padding: 5px;
+}
+.column3:hover {text-decoration: underline;}
+.column3:focus-within {text-decoration: underline;}
+.column3 a {
+    text-decoration: none !important;
+    border:0px !important;
+    outline:none;
+    border-width: 0px;
+    outline-width:0px;
+    border-bottom: none;
+    color: #333333 !important;
+}
+/* Aligning the second row items with the items from the first row */
+.row2 {                          
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-end;
+    justify-content:flex-end;
+}
+.column1row2 {
+    flex: calc(640/344);
+    padding: 5px;
+}
+.column1row2:hover {text-decoration: underline;}
+.column1row2:focus-within {text-decoration: underline;}
+.column1row2 a { 
+    text-decoration: none !important;
+    border:0px !important;
+    outline:none;
+    border-width: 0px;
+    outline-width:0px;
+    border-bottom: none;
+    color: #333333 !important;
+}
+.column2row2 {
+    flex: calc(640/396);
+    padding: 5px;
+}
+.column2row2:hover {text-decoration: underline;}
+.column2row2:focus-within {text-decoration: underline;}
+.column2row2 a {
+    text-decoration: none !important;
+    border:0px !important;
+    outline:none;
+    border-width: 0px;
+    outline-width:0px;
+    border-bottom: none;
+    color: #333333 !important;
+}
+.column3row2 {
+    flex: calc(640/566);
+    padding: 5px;
+}
+.column3row2:hover {text-decoration: underline;}
+.column3row2:focus-within {text-decoration: underline;}                               
+.column3row2 a {
+    text-decoration: none !important;
+    border:0px !important;
+    outline:none;
+    border-width: 0px;
+    outline-width:0px;
+    border-bottom: none;
+    color: #333333 !important;
+}
+/* Positioning a news panel on the top right of the website and setting the styling*/
+.newspanel {
+    position: relative;
+    float:left;
+    top: -410px;
+    left: 760px;
+    max-width: 250px;
+    overflow-wrap: break-word;
+    min-width: 100px;
+    overflow: visible;
+    display: block;
+}    
+h4 {margin-bottom: -3px;}
+.newsdate {
+    font-size: 9px;
+    position: relative;
+}
+.newstext {
+    overflow-wrap: break-word;
+    margin-bottom: 15px;
+}
