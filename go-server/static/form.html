@@ -1,15 +1,112 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Add Walk Event" content="Form to add a Walk Event to the Admin Walking Club Website">
+        <meta name="Chris Arnold" content="Author Name">
+        <title>Add Walk Event</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="q2b.css">
     </head>
     <body>
-        <div>
-            <form method="POST" action="/form">
-                <label>Name</label><input name="name" type="text" value=""/>
-                <label>Address</label><input name="address" type="text" value=""/>
 
-                <input type="submit" value="submit"/>
+        <header class="header">
+            <a href="/" class="logo">Admin Section</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+                <li><a href="#" class="current" >Walk Events</a></li>
+                <li><a href="#">Other Events</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Announcement</a></li>
+                <li><a href="#">Admin Updates</a></li>
+                <li><a href="https://www.oustudents.com/organisation/6348/">Log Out</a></li>
+            </ul>
+        </header>
+
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs_items">
+                <a href="placeholder.html" class="breadcrumb_link">Walk Events</a>
+            </li>
+            <li class="breadcrumbs_items">
+                <a href="#" id="breadcrumb_link_active">Add Walk Event</a>
+            </li>
+        </ul>
+
+        <div class="container">
+            <form method="POST"  action="/form">
+                <div class="row">
+                    <div class="col-25">
+                        <label>Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input name="walkname" required placeholder="Name of the walk...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Date</label>
+                    </div>
+                    <div class="col-75">
+                        <input name="date" type=date min="2022-05-01" name="walk date" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Start</label>
+                    </div>
+                    <div class="col-75">
+                        <input name="start" type=time min="08:00" max="21:00" step="900" name="start time" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>End</label>
+                    </div>
+                    <div class="col-75">
+                        <input name="end" type=time min="08:00" max="21:00" name="end time">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Meeting point</label>
+                    </div>
+                    <div class="col-75">
+                        <input name="meetingpt" required placeholder="Meeting point...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Distance (km)</label>
+                    </div>
+                    <div class="col-75">
+                        <input name="distance" type="number" name="dist" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Leader</label>
+                    </div>
+                    <div class="col-75">
+                        <input name="lead" required placeholder="Walk leader...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Comments</label>
+                    </div>
+                    <div class="col-75">
+                        <input name="Comments" required placeholder="Comments...">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="row">
+                    <input type="hidden" name="sessionID" value="abcd1234-ee56-ff78-9090" />
+                </div>
             </form>
         </div>
     </body>
