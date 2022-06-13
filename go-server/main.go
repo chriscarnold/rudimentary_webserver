@@ -28,7 +28,7 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Meeting point = %s\n", meetingpt)
 	fmt.Fprintf(w, "Leader = %s\n", leader)
 	fmt.Fprintf(w, "Distance = %s km\n", distance)
-	fmt.Fprintf(w, "Comments = %s km\n", comments)
+	fmt.Fprintf(w, "Comments = %s\n", comments)
 }
 
 //function for the /hello page
